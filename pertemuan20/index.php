@@ -24,8 +24,8 @@ if ( isset($_POST["cari"]) ){
 		.loader {
 			width: 100px;
 			position: absolute;
-			top: 115px;
-			left: 140;
+			top: 118px;
+			left: 210px;
 			z-index: -1;
 			display: none;
 		}
@@ -46,7 +46,8 @@ if ( isset($_POST["cari"]) ){
 	<input type="text" name="keyword" autocomplete="off" autofocus placeholder="Masukkan keyword..." size="40" id="keyword">
 	<button name="cari" type="submit" id="tombol-cari">Cari</button>
 
-	<img src="img/loader_gif.gif" class="loader">
+	<img src="img/loader.gif" class="loader">
+
 </form>
 <br>
 

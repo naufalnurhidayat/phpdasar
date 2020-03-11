@@ -1,25 +1,23 @@
 $(document).ready(function() {
+    // hilangkan tombol cari
+    $('#tombol-cari').hide();
 
-	// menghilangkan tombol cari
-	$('#tombol-cari').hide();
+    // event ketika keyword ditulis
+    $('#keyword').on('keyup', function() {
+        // munculkan icon loading
+        $('.loader').show();
 
-	// event ketika keyword ditulis
-	$('#keyword').on('keyup', function() {
-		// munculkan icon loading
-		$('.loader').show();
-		
-		// ajax menggunakan load
-		// $('#container').load('ajax/mahasiswa.php?' + $('#keyword').val());
+        // ajax menggunakan load
+        // $('#container').load('ajax/mahasiswa.php?keyword=' + $('#keyword').val());
 
-		// $.get()
-		$.get('ajax/mahasiswa.php?keyword=' + $('#keyword').val(), function(data){
+        // $.get()
+        $.get('ajax/animasi.php?keyword=' + $('#keyword').val(), function(data) {
 
-			$('#container').html(data);
-			$('.loader').hide();
+            $('#container').html(data);
+            $('.loader').hide();
 
-		});
-	});
+        });
 
+    });
 
-
-});
+})
